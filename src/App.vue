@@ -1,3 +1,6 @@
 <template>
-  <div>Medium Clone!</div>
+  <div>
+    Medium Clone!
+    <router-view />
+  </div>
 </template>
