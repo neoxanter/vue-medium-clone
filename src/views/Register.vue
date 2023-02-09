@@ -8,6 +8,32 @@
             <p class="text-xs-center">
               <router-link :to="{name: 'login'}">Need an account?</router-link>
             </p>
+            <form @submit.prevent="onSubmit">
+              <fieldset class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="Username"
+                />
+              </fieldset>
+              <fieldset class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="Email"
+                />
+              </fieldset>
+              <fieldset class="form-group">
+                <input
+                  type="password"
+                  class="form-control form-control-lg"
+                  placeholder="Password"
+                />
+              </fieldset>
+              <button class="btn btn-lg btn-primary pull-xs-right">
+                Sign Up
+              </button>
+            </form>
           </div>
         </div>
       </div>
