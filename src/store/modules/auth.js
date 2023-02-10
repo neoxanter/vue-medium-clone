@@ -27,7 +27,7 @@ const actions = {
           context.commit('registerSuccess', response.data.user)
         })
         .catch((result) => {
-          context.commit('registerFailure')
+          context.commit('registerFailure', result.response.data.errors)
           console.log('result errors', result)
         })
     })
