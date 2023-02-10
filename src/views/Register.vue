@@ -18,18 +18,19 @@
               </fieldset>
               <fieldset class="form-group">
                 <input
-                  type="text"
-                  class="form-control form-control-lg"
-                  placeholder="Email"
-                />
-              </fieldset>
-              <fieldset class="form-group">
-                <input
                   type="password"
                   class="form-control form-control-lg"
                   placeholder="Password"
                 />
               </fieldset>
+              <fieldset class="form-group">
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="Email"
+                />
+              </fieldset>
+
               <button
                 class="
                   btn btn-lg btn-primary
