@@ -1,5 +1,4 @@
 import authApi from '@/api/auth'
-import {resolve} from 'core-js/fn/promise'
 
 const state = {
   isSubmitting: false,
@@ -24,4 +23,5 @@ const actions = {
 export default {
   state,
   mutations,
+  actions,
 }
