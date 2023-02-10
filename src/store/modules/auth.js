@@ -13,9 +13,14 @@ const mutations = {
 const actions = {
   register(context, credentials) {
     return new Promise(() => {
-      authApi.register(credentials).then((response) => {
-        console.log('response', response)
-      })
+      authApi
+        .register(credentials)
+        .then((response) => {
+          console.log('response', response)
+        })
+        .catch((result) => {
+          console.log('result errors', result)
+        })
     })
   },
 }
