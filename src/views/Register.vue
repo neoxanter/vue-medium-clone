@@ -68,11 +68,15 @@ export default {
   },
   methods: {
     onSubmit() {
-      this.$store.dispatch('register', {
-        username: this.username,
-        password: this.password,
-        email: this.email,
-      })
+      this.$store
+        .dispatch('register', {
+          username: this.username,
+          password: this.password,
+          email: this.email,
+        })
+        .then((user) => {
+          this.$router.push({name: 'home'})
+        })
     },
   },
 }
