@@ -17,8 +17,9 @@ const mutations = {
     state.currentUser = payload
     state.isLoggedIn = true
   },
-  registerFailure(state) {
+  registerFailure(state, payload) {
     state.isSubmitting = false
+    state.validationErrors = payload
   },
 }
 
@@ -29,12 +30,10 @@ const actions = {
       authApi
         .register(credentials)
         .then((response) => {
-          console.log('response', response)
           context.commit('registerSuccess', response.data.user)
         })
         .catch((result) => {
           context.commit('registerFailure', result.response.data.errors)
-          console.log('result errors', result)
         })
     })
   },
