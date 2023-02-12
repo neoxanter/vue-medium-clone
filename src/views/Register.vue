@@ -73,7 +73,7 @@ export default {
           username: this.username,
           password: this.password,
           email: this.email,
-        })
+        }) // eslint-disable-next-line
         .then((user) => {
           this.$router.push({name: 'home'})
         })
