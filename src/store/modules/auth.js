@@ -1,6 +1,5 @@
 import authApi from '@/api/auth'
 import { setItem } from '@/helpers/persistanceStorage'
-import { resolve } from 'core-js/fn/promise'
 
 const state = {
   isSubmitting: false,
@@ -27,7 +26,7 @@ const mutations = {
 
 const actions = {
   register(context, credentials) {
-    return new Promise(() => {
+    return new Promise((resolve) => {
       context.commit('registerStart')
       authApi
         .register(credentials)
