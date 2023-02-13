@@ -56,6 +56,7 @@ import VmcValidationErrors from '@/components/ValidationErrors'
 export default {
   name: 'VmcRegister',
   components: {
+    // eslint-disable-next-line
     VmcValidationErrors,
   },
   data() {
