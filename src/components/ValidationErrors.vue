@@ -17,7 +17,10 @@ export default {
   },
   computed: {
     errorMessages() {
-      return ['Email cant be blank', 'Password cant be blank']
+      return Object.keys(this.validationErrors).map((name) => {
+        const messages = this.validationErrors[name].join(', ')
+        return `${name} ${messages}`
+      })
     },
   },
 }
