@@ -8,7 +8,10 @@
             <p class="text-xs-center">
               <router-link :to="{name: 'login'}">Need an account?</router-link>
             </p>
-            <vmc-validation-errors :validation-errors="validationErrors" />
+            <vmc-validation-errors
+              v-if="validationErrors"
+              :validation-errors="validationErrors"
+            />
             <form @submit.prevent="onSubmit">
               <fieldset class="form-group">
                 <input
