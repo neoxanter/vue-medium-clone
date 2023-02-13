@@ -52,8 +52,12 @@
 </template>
 
 <script>
+import VmcValidationErrors from '@/components/ValidationErrors'
 export default {
   name: 'VmcRegister',
+  components: {
+    VmcValidationErrors,
+  },
   data() {
     return {
       username: '',
