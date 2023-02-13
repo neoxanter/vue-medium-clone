@@ -1,5 +1,9 @@
 <template>
-  <div>Here a validation errors</div>
+  <ul class="error-messages">
+    <li v-for="errorMessage in errorMessages" :key="errorMessage">
+      {{ errorMessage }}
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -9,6 +13,11 @@ export default {
     validationErrors: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    errorMessages() {
+      return ['Email cant be blank', 'Password cant be blank']
     },
   },
 }
