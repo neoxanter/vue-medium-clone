@@ -5,5 +5,11 @@
 <script>
 export default {
   name: 'VmcValidationErrors',
+  props: {
+    validationErrors: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>

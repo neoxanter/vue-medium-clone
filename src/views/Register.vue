@@ -8,6 +8,7 @@
             <p class="text-xs-center">
               <router-link :to="{name: 'login'}">Need an account?</router-link>
             </p>
+            <vmc-validation-errors :validation-errors="validationErrors" />
             <form @submit.prevent="onSubmit">
               <fieldset class="form-group">
                 <input
@@ -56,7 +57,6 @@ import VmcValidationErrors from '@/components/ValidationErrors'
 export default {
   name: 'VmcRegister',
   components: {
-    // eslint-disable-next-line
     VmcValidationErrors,
   },
   data() {
@@ -69,6 +69,9 @@ export default {
   computed: {
     isSubmitting() {
       return this.$store.state.auth.isSubmitting
+    },
+    validationErrors() {
+      return this.$store.state.auth.validationErrors
     },
   },
   methods: {
