@@ -14,6 +14,10 @@ export const mutationTypes = {
   registerFailure: '[auth] registerFailure'
 }
 
+export const actionTypes = {
+  register: '[auth] register'
+}
+
 const mutations = {
   [mutationTypes.registerStart](state) {
     state.isSubmitting = true
@@ -31,7 +35,7 @@ const mutations = {
 }
 
 const actions = {
-  register(context, credentials) {
+  [actionTypes.register](context, credentials) {
     return new Promise((resolve) => {
       context.commit('registerStart')
       authApi

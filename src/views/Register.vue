@@ -57,6 +57,8 @@
 
 <script>
 import VmcValidationErrors from '@/components/ValidationErrors'
+import {actionTypes} from '@/store/modules/auth'
+
 export default {
   name: 'VmcRegister',
   components: {
@@ -80,7 +82,7 @@ export default {
   methods: {
     onSubmit() {
       this.$store
-        .dispatch('register', {
+        .dispatch(actionTypes.register, {
           username: this.username,
           password: this.password,
           email: this.email,
