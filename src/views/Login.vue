@@ -78,7 +78,7 @@ export default {
         .dispatch(actionTypes.login, {
           password: this.password,
           email: this.email,
-        }) // eslint-disable-next-line
+        })
         .then(() => {
           this.$router.push({name: 'home'})
         })
