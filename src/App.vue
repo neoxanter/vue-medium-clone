@@ -1,6 +1,17 @@
 <template>
   <div>
-    Medium Clone!
+    <vmc-topbar />
     <router-view />
   </div>
 </template>
+
+<script>
+import VmcTopBar from '@/components/TopBar'
+export default {
+  name: 'VmcApp',
+  components: {
+    // eslint-disable-next-line
+    VmcTopBar,
+  },
+}
+</script>
