@@ -1,13 +1,20 @@
 <template>
   <nav class="navbar navbar-light">
     <div class="container">
-      <router-link class="navbar-link" :to="{name: 'home'}"
+      <router-link class="navbar-brand" :to="{name: 'home'}"
         >MediumClone</router-link
       >
       <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
           <router-link class="nav-link" :to="{name: 'home'}">Home</router-link>
         </li>
+        <template v-if="isLoggedIn">
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{name: 'home'}">
+              <i class="ion-compose"></i> &nbsp; New article</router-link
+            >
+          </li>
+        </template>
       </ul>
     </div>
   </nav>
