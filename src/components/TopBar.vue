@@ -22,10 +22,10 @@
           <li class="nav-item">
             <router-link
               class="nav-link"
-              :to="{name: 'userProfile', params: {slug: currentUser.userName}}"
+              :to="{name: 'userProfile', params: {slug: currentUser.username}}"
             >
-              <img :src="currentUser.image" class="pic" />
-              &nbsp; {{ currentUser.userName }}
+              <img :src="currentUser.image" class="user-pic" />
+              &nbsp; {{ currentUser.username }}
             </router-link>
           </li>
         </template>
