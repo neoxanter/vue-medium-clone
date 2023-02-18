@@ -6,16 +6,29 @@
       >
       <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
-          <router-link class="nav-link" :to="{name: 'home'}">Home</router-link>
+          <router-link
+            class="nav-link"
+            :to="{name: 'home'}"
+            active-class="active"
+            >Home</router-link
+          >
         </li>
         <template v-if="isLoggedIn">
           <li class="nav-item">
-            <router-link class="nav-link" :to="{name: 'createArticle'}">
+            <router-link
+              class="nav-link"
+              :to="{name: 'createArticle'}"
+              active-class="active"
+            >
               <i class="ion-compose"></i> &nbsp; New article</router-link
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{name: 'settings'}">
+            <router-link
+              class="nav-link"
+              :to="{name: 'settings'}"
+              active-class="active"
+            >
               <i class="ion-gear-a"></i> &nbsp; Settings</router-link
             >
           </li>
@@ -31,12 +44,20 @@
         </template>
         <template v-if="!isLoggedIn">
           <li class="nav-item">
-            <router-link class="nav-link" :to="{name: 'login'}">
+            <router-link
+              class="nav-link"
+              :to="{name: 'login'}"
+              active-class="active"
+            >
               Sign in</router-link
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{name: 'register'}">
+            <router-link
+              class="nav-link"
+              :to="{name: 'register'}"
+              active-class="active"
+            >
               Sign up</router-link
             >
           </li>
