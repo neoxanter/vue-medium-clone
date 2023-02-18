@@ -10,9 +10,23 @@
         </li>
         <template v-if="isLoggedIn">
           <li class="nav-item">
-            <router-link class="nav-link" :to="{name: 'home'}">
+            <router-link class="nav-link" :to="{name: 'createArticle'}">
               <i class="ion-compose"></i> &nbsp; New article</router-link
             >
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{name: 'settings'}">
+              <i class="ion-gear-a"></i> &nbsp; Settings</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link
+              class="nav-link"
+              :to="{name: 'userProfile', params: {slug: currentUser.userName}}"
+            >
+              <img :src="currentUser.image" class="pic" />
+              &nbsp; {{ currentUser.userName }}
+            </router-link>
           </li>
         </template>
       </ul>
