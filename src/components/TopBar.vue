@@ -74,9 +74,12 @@ export default {
   name: 'VmcTopBar',
   computed: {
     ...mapState({
-      currentUser: (state) => state.auth.currentUser,
+      // currentUser: (state) => state.auth.currentUser,
       isLoggedIn: (state) => state.auth.isLoggedIn,
     }),
+    currentUser() {
+      return this.$store.getters.currentUser
+    },
   },
 }
 </script>
