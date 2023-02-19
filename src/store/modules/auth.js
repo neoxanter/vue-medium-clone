@@ -22,6 +22,12 @@ export const actionTypes = {
   login: '[auth] login'
 }
 
+const getters = {
+  currentUser: state => {
+    return state.currentUser
+  }
+}
+
 const mutations = {
   [mutationTypes.registerStart](state) {
     state.isSubmitting = true
@@ -88,4 +94,5 @@ export default {
   state,
   mutations,
   actions,
+  getters
 }
