@@ -69,6 +69,7 @@
 </template>
 
 <script>
+import {getterTypes} from '@/store/modules/auth'
 import {mapState} from 'vuex'
 export default {
   name: 'VmcTopBar',
@@ -78,7 +79,7 @@ export default {
       isLoggedIn: (state) => state.auth.isLoggedIn,
     }),
     currentUser() {
-      return this.$store.getters.currentUser
+      return this.$store.getters[getterTypes.currentUser]
     },
   },
 }
