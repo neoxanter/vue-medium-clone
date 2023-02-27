@@ -39,11 +39,7 @@
               </fieldset>
 
               <button
-                class="
-                  btn btn-lg btn-primary
-                  pull-xs-right
-                  :disabled='isSubmitting'
-                "
+                class="btn btn-lg btn-primary pull-xs-right :disabled='isSubmitting'"
               >
                 Sign Up
               </button>
@@ -87,7 +83,7 @@ export default {
           email: this.email,
         }) // eslint-disable-next-line
         .then((user) => {
-          this.$router.push({name: 'home'})
+          this.$router.push({name: 'globalFeed'})
         })
     },
   },

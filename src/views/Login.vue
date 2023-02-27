@@ -33,11 +33,7 @@
               </fieldset>
 
               <button
-                class="
-                  btn btn-lg btn-primary
-                  pull-xs-right
-                  :disabled='isSubmitting'
-                "
+                class="btn btn-lg btn-primary pull-xs-right :disabled='isSubmitting'"
               >
                 Sign In
               </button>
@@ -86,7 +82,7 @@ export default {
           email: this.email,
         })
         .then(() => {
-          this.$router.push({name: 'home'})
+          this.$router.push({name: 'globalFeed'})
         })
     },
   },
